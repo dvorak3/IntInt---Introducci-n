@@ -206,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -3.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 541547240}
   - component: {fileID: 541547241}
   - component: {fileID: 541547242}
+  - component: {fileID: 541547243}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -537,7 +538,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541547234}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d932f4f4daec21b4d9165dc642dfe0e9, type: 3}
   m_Name: 
@@ -550,13 +551,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541547234}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 952152eb9f3116b48805f1be98de85cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DistanciasObjetos
   cubo: {fileID: 1822253651}
   cilindro: {fileID: 1840715673}
+--- !u!114 &541547243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541547234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1b6f31610d6014aa3c88aeb161dad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjetoDesplazable
+  desplazamiento: {x: 0, y: 0, z: 0}
 --- !u!1 &774656493
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +828,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446127596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 5000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -925,6 +939,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446127596}
   m_CullTransparentMesh: 1
+--- !u!1 &1509541819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1509541821}
+  - component: {fileID: 1509541820}
+  m_Layer: 0
+  m_Name: MarcadorPosiciones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1509541820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509541819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba64288afc4912c439050b2f54783e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MarcadorPosiciones
+  esfera: {fileID: 541547243}
+  cubo: {fileID: 1822253652}
+  cilindro: {fileID: 1840715674}
+  desplazamientoEsfera: {x: 0, y: 2, z: 0}
+  desplazamientoCubo: {x: 2, y: 0, z: 0}
+  desplazamientoCilindro: {x: -2, y: 0, z: 0}
+--- !u!4 &1509541821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509541819}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.10107, y: -0, z: 2.55244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1822253647
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +1001,7 @@ GameObject:
   - component: {fileID: 1822253650}
   - component: {fileID: 1822253649}
   - component: {fileID: 1822253648}
+  - component: {fileID: 1822253652}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1031,12 +1096,25 @@ Transform:
   m_GameObject: {fileID: 1822253647}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.59, y: -0, z: 1.08}
+  m_LocalPosition: {x: -5.67, y: -0, z: 1.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1822253652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822253647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1b6f31610d6014aa3c88aeb161dad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjetoDesplazable
+  desplazamiento: {x: 0, y: 0, z: 0}
 --- !u!1 &1840715669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1127,7 @@ GameObject:
   - component: {fileID: 1840715672}
   - component: {fileID: 1840715671}
   - component: {fileID: 1840715670}
+  - component: {fileID: 1840715674}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1145,12 +1224,25 @@ Transform:
   m_GameObject: {fileID: 1840715669}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.59, y: 0.24748, z: 1.973}
+  m_LocalPosition: {x: 6.15, y: 0.24748, z: 1.973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1840715674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840715669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1b6f31610d6014aa3c88aeb161dad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjetoDesplazable
+  desplazamiento: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1163,3 +1255,4 @@ SceneRoots:
   - {fileID: 1305536121}
   - {fileID: 1840715673}
   - {fileID: 1822253651}
+  - {fileID: 1509541821}
